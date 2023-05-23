@@ -75,6 +75,7 @@ function find_anhos() {
 };
 
 function val_dia() {
+    dia.value = parseInt (dia.value);
     if (dia.value > 31 || dia.value < 0) {
         document.getElementById("lab_day").style.color = 'rgb(193, 49, 69)';
         dia.style.border = '1px solid rgb(193, 49, 69)';
@@ -89,6 +90,7 @@ function val_dia() {
 }
 
 function val_mon() {
+    mes.value = parseInt (mes.value);
     if (mes.value > 12 || mes.value < 0) {
         document.getElementById("lab_month").style.color = 'rgb(193, 49, 69)';
         mes.style.border = '1px solid rgb(193, 49, 69)';
@@ -102,6 +104,7 @@ function val_mon() {
 }
 
 function val_yea() {
+    anho.value = parseInt(anho.value);
     if (anho.value > anho_actual) {
         document.getElementById("lab_year").style.color = 'rgb(193, 49, 69)';
         anho.style.border = '1px solid rgb(193, 49, 69)';
