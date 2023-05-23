@@ -1,0 +1,131 @@
+/* Dato gracioso: estuve media hora resolviendo porque mi css no funcionava y resulta que 
+no le puedes pones  " ; " despues de la llave final en css por que sino no aplica los estilos XD 
+(mucho js ;v)*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+    /* margin: 0; */
+}
+
+#fondo01 {
+    width: 600px;
+    height: 450px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#fondo01>#fondo02 {
+    width: 430px;
+    height: 350px;
+    border-radius: 15px 15px 100px;
+    background-color: white;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+}
+
+#fondo01>#fondo02>#calculator {
+    /* background-color: rgb(37, 37, 209); */
+    margin-left: 20px;
+    width: 350px;
+    height: 330px;
+}
+
+#fondo01>#fondo02>#calculator>#caja_01 {
+    /* display: flex; */
+    /* width: 200px; */
+    border-bottom: 1px solid rgb(215, 215, 215);
+    /* background-color: rgb(116, 91, 163); */
+    padding-top: 20px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    display: flex;
+    margin-left: 10px;
+    /* flex-wrap: wrap; */
+    text-align: left;
+    justify-content: space-around;
+    /* width: 300px;
+    height: 20px; */
+}
+
+.date {
+    font-size: 8px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: rgb(163, 163, 163);
+}
+
+.date_error {
+    font-size: 8px;
+    font-weight: bold;
+    color: transparent;
+    margin-top: 6px;
+    /* color: rgb(193, 49, 69); */
+    user-select: none;
+}
+
+.box_date {
+    display: inline-flex;
+    /* background-color: cadetblue; */
+    /* border: 1px solid black; */
+    flex-direction: column;
+}
+
+.i_date {
+    width: 70px;
+    height: 20px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+#caja_02 {
+    /* border: 1px solid rgb(255, 0, 0); */
+    /* background-color: rgb(26, 92, 92); */
+    padding-left: 20px;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.span_css {
+    color: rgb(133, 78, 247);
+}
+
+#submit {
+    position: relative;
+    bottom: 225px;
+    left: 335px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(133, 78, 247);
+    background-color: rgb(133, 78, 247);
+    color: white;
+
+    font-size: 25px;
+    padding-bottom: 8px;
+}
+
+#submit:hover {
+    transition: 500ms;
+    background-color: white;
+    color: rgb(133, 78, 247);
+}
