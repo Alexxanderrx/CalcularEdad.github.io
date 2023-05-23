@@ -21,13 +21,13 @@ btn.addEventListener("click", (e) => {
 });
 
 function activar() {
-    val_dia();
-    val_mon();
-    val_yea();
-
     find_dia();
     find_mes();
     find_anhos();
+    // Las validaciones siempre pon las al ultimo porfavor no lo muevas ↓↓↓
+    val_dia();
+    val_mon();
+    val_yea();
     // Este ↓ si debe ir al ultimo porfavor no lo muevas ↓↓↓
     val_date();
 };
