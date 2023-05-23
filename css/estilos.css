@@ -3,6 +3,7 @@ no le puedes pones  " ; " despues de la llave final en css por que sino no aplic
 (mucho js ;v)*/
 
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -17,7 +18,6 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgb(240, 240, 240);
-    /* margin: 0; */
 }
 
 #fondo01 {
@@ -35,33 +35,24 @@ body {
     height: 350px;
     border-radius: 15px 15px 100px;
     background-color: white;
-    /* display: flex; */
-    /* align-items: center;
-    justify-content: center; */
 }
 
 #fondo01>#fondo02>#calculator {
-    /* background-color: rgb(37, 37, 209); */
     margin-left: 20px;
     width: 350px;
     height: 330px;
 }
 
 #fondo01>#fondo02>#calculator>#caja_01 {
-    /* display: flex; */
-    /* width: 200px; */
     border-bottom: 1px solid rgb(215, 215, 215);
-    /* background-color: rgb(116, 91, 163); */
     padding-top: 20px;
     padding-right: 25px;
     padding-bottom: 20px;
     display: flex;
+    
     margin-left: 10px;
-    /* flex-wrap: wrap; */
     text-align: left;
     justify-content: space-around;
-    /* width: 300px;
-    height: 20px; */
 }
 
 .date {
@@ -70,6 +61,8 @@ body {
     margin-bottom: 6px;
     font-weight: bold;
     color: rgb(163, 163, 163);
+    font-family: 'Maven Pro', sans-serif;
+
 }
 
 .date_error {
@@ -77,14 +70,11 @@ body {
     font-weight: bold;
     color: transparent;
     margin-top: 6px;
-    /* color: rgb(193, 49, 69); */
     user-select: none;
 }
 
 .box_date {
     display: inline-flex;
-    /* background-color: cadetblue; */
-    /* border: 1px solid black; */
     flex-direction: column;
 }
 
@@ -92,13 +82,18 @@ body {
     width: 70px;
     height: 20px;
     border: 1px solid rgb(187, 187, 187);
+    font-weight: 900;
+    text-align: center;
 }
 
+#month.i_date {
+    width: 70px;
+    
+}
+
+
 #caja_02 {
-    /* border: 1px solid rgb(255, 0, 0); */
-    /* background-color: rgb(26, 92, 92); */
     padding-left: 20px;
-    /* font-family: 'IBM Plex Sans', sans-serif; */
     font-family: 'Dela Gothic One', cursive;
     font-size: 20px;
     line-height: 30px;
@@ -131,37 +126,49 @@ body {
 }
 
 @media screen and (max-width: 950px) {
+    body{
+        width: 100%;
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     #fondo01 {
-        width: 360px;
-        height: 450px;
+        width: 300px;
+        height: 500px;
     }
     #fondo01>#fondo02 {
-        width: 320px;
+        width: 280px;
         height: 380px;
     }
 
-
     #fondo01>#fondo02>#calculator>#caja_01{
-        width: 240px;
+        width: 230px;
+        padding-right: 7px;
         padding-bottom: 40px;
     }
-    .i_date {
-        width: 55px;
+    .box_date{
+        margin-left: 5px;
+    }
+    #day.i_date {
+        width: 70px;
         height: 35px;
     }
-
+    #month.i_date {
+        width: 70px;
+        height: 35px;
+    }
+    #year.i_date {
+        width: 70px;
+        height: 35px;
+    }
     #submit {
         position: relative;
         bottom: 240px;
 
-        left: 120px;
+        left: 100px;
         height: 50px;
         width: 50px;
-
-        border-radius: 50%;
-        border: 1px solid rgb(133, 78, 247);
-        background-color: rgb(133, 78, 247);
-        color: white;
     
         font-size: 25px;
         
