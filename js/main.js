@@ -90,6 +90,7 @@ function val_dia() {
 }
 
 function val_mon() {
+//   Deve colocarse esto ↓ o sino los valores con 0 al principio no lo reconocera bien
     mes.value = parseInt (mes.value);
     if (mes.value > 12 || mes.value < 0) {
         document.getElementById("lab_month").style.color = 'rgb(193, 49, 69)';
