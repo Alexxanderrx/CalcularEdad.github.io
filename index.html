@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular_Edad</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <div id="fondo01">
+        <div id="fondo02">
+            <form id="calculator" name="calculator">
+                <div id="caja_01">
+                    <div class="box_date">
+                        <label id=lab_day class="date">DAY</label>
+                        <input class="i_date" type="number" id="day">
+                        <label id="day_error" class="date_error">Must be a valid day.</label>
+                    </div>
+                    <div class="box_date">
+                        <label id=lab_month class="date">MONTH</label>
+                        <input class="i_date" type="number" id="month">
+                        <label id="mon_error" class="date_error">Must be a valid month.</label>
+                    </div>
+                    <div class="box_date">
+                        <label id=lab_year class="date">YEAR</label>
+                        <input class="i_date" type="number" id="year">
+                        <label id="yea_error" class="date_error">Must be a valid year.</label>
+                    </div>
+                </div>
+                <div id="caja_02">
+                    <h1><span class="span_css" id="span_yea">0</span> years</h1>
+                    <h1><span class="span_css" id="span_mon">0</span> months</h1>
+                    <h1><span class="span_css" id="span_day">0</span> days</h1>
+                </div>
+                <input type="submit" id="submit" name="lname" value="↓">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
