@@ -32,8 +32,10 @@ function activar() {
     val_date();
 };
 
-const mes_w_30 = ["2", "4", "6", "9", "11"]
-const mes_w_31 = ["1", "3", "5", "7", "8", "10", "12"]
+// aqui tecnicamente estan los meses que tiene 30 dias o 31 dias
+//(solo si la persona elige uno de ellos lo va a tomar como mes)
+const mes_w_30 = ["2", "4", "6", "9", "11","02", "04", "06", "09"]
+const mes_w_31 = ["1", "3", "5", "7", "8", "10", "12","01", "03", "05", "07", "08",]
 
 
 function find_dia() {
@@ -42,13 +44,13 @@ function find_dia() {
     if (mostrar_dia < 0 && mes_w_30.includes(mes.value)) {
         mostrar_dia = 30 + mostrar_dia;
         span_day.innerHTML = mostrar_dia;
-        // mes_actual--
+
     } else if (mostrar_dia < 0 && mes_w_31.includes(mes.value)) {
         mostrar_dia = 31 + mostrar_dia;
         span_day.innerHTML = mostrar_dia;
 
-        // mes_actual--
     } else {
+        console.log("sera este??")
         span_day.innerHTML = mostrar_dia;
     };
 };
@@ -61,7 +63,7 @@ function find_mes() {
             mostrar_mes = 12 + mostrar_mes - 1;
             span_month.innerHTML = mostrar_mes;
             console.log ("b");
-            // anho_actual--
+
         }else {
             span_month.innerHTML = mostrar_mes;
             console.log ("c");
@@ -71,7 +73,7 @@ function find_mes() {
             mostrar_mes = 12 + mostrar_mes;
             span_month.innerHTML = mostrar_mes;
             console.log ("baa");
-            // anho_actual--
+
         } else {
             span_month.innerHTML = mostrar_mes;
             console.log ("caa");
@@ -89,8 +91,6 @@ function find_anhos() {
 };
 
 function val_dia() {
-
-    dia.value = parseInt (dia.value);
 
     if (dia.value > 31 || dia.value < 0) {
         document.getElementById("lab_day").style.color = 'rgb(193, 49, 69)';
@@ -112,8 +112,6 @@ function val_dia() {
 
 function val_mon() {
 
-    mes.value = parseInt (mes.value);
-
     if (mes.value > 12 || mes.value < 0) {
         document.getElementById("lab_month").style.color = 'rgb(193, 49, 69)';
         mes.style.border = '1px solid rgb(193, 49, 69)';
@@ -127,8 +125,6 @@ function val_mon() {
 }
 
 function val_yea() {
-
-    anho.value = parseInt(anho.value);
 
     if (anho.value > anho_actual) {
         document.getElementById("lab_year").style.color = 'rgb(193, 49, 69)';
