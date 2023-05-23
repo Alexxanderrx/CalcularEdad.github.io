@@ -19,6 +19,19 @@ btn.addEventListener("click", (e) => {
     activar();
 });
 
+dia.addEventListener('keydown', pasar_mes);
+function pasar_mes(event) {
+    if (event.keyCode == 13) {
+        mes.focus();
+    }
+}
+
+mes.addEventListener('keydown', pasar_anho);
+function pasar_anho(event) {
+    if (event.keyCode == 13) {
+        anho.focus();
+    }
+}
 
 function activar() {
     find_dia();
@@ -34,18 +47,20 @@ function activar() {
 
 // aqui tecnicamente estan los meses que tiene 30 dias o 31 dias
 //(solo si la persona elige uno de ellos lo va a tomar como mes)
-const mes_w_30 = ["2", "4", "6", "9", "11","02", "04", "06", "09"]
-const mes_w_31 = ["1", "3", "5", "7", "8", "10", "12","01", "03", "05", "07", "08",]
+const mes_w_30 = [2, 4, 6, 9, 11]
+const mes_w_31 = [1, 3, 5, 7, 8, 10, 12]
 
+// mes.value = parseInt(mes.value);
 
 function find_dia() {
     let mostrar_dia = dia_actual - dia.value;
-
-    if (mostrar_dia < 0 && mes_w_30.includes(mes.value)) {
+    let mes_int = parseInt(mes.value);
+    console.log(mes_int);
+    if (mostrar_dia < 0 && mes_w_30.includes(mes_int)) {
         mostrar_dia = 30 + mostrar_dia;
         span_day.innerHTML = mostrar_dia;
 
-    } else if (mostrar_dia < 0 && mes_w_31.includes(mes.value)) {
+    } else if (mostrar_dia < 0 && mes_w_31.includes(mes_int)) {
         mostrar_dia = 31 + mostrar_dia;
         span_day.innerHTML = mostrar_dia;
 
@@ -56,6 +71,7 @@ function find_dia() {
 };
 
 function find_mes() {
+
     let mostrar_mes = mes_actual - mes.value;
 
     if (dia_actual < dia.value) {
