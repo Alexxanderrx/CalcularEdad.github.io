@@ -129,3 +129,47 @@ body {
     background-color: white;
     color: rgb(133, 78, 247);
 }
+
+@media screen and (max-width: 950px) {
+    #fondo01 {
+        width: 360px;
+        height: 450px;
+    }
+    #fondo01>#fondo02 {
+        width: 320px;
+        height: 380px;
+    }
+
+
+    #fondo01>#fondo02>#calculator>#caja_01{
+        width: 240px;
+        padding-bottom: 40px;
+    }
+    .i_date {
+        width: 55px;
+        height: 35px;
+    }
+
+    #submit {
+        position: relative;
+        bottom: 240px;
+
+        left: 120px;
+        height: 50px;
+        width: 50px;
+
+        border-radius: 50%;
+        border: 1px solid rgb(133, 78, 247);
+        background-color: rgb(133, 78, 247);
+        color: white;
+    
+        font-size: 25px;
+        
+        padding-bottom: 8px;
+    }
+    
+    #fondo01>#fondo02>#calculator>#caja_02 {
+        padding-top: 20px;
+    }
+
+}
