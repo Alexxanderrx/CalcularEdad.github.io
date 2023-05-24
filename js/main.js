@@ -1,4 +1,4 @@
-<!-- Hecho por Víctor Alexander Morales Lucero -->
+// Hecho por Víctor Alexander Morales Lucero
 const dia = document.getElementById("day");
 const mes = document.getElementById("month");
 const anho = document.getElementById("year");
